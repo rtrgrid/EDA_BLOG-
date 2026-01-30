@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+venv/
+.env
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large raw data (ignore only raw)
+data/raw/*.csv
+data/raw/*.zip
+notebooks/india_dataset.ipynb
