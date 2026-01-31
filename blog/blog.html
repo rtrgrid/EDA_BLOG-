@@ -219,6 +219,21 @@ because it reveals what happens when pollution has nowhere to go.
   </iframe>
 </div>
 
+<div class="plot-block">
+  <div class="plot-context">
+    PM2.5 snapshot across Indian monitoring stations (day-average).
+    Each point is a station; colour reflects current PM2.5 level. This view
+    complements the state-level coverage map by showing station-level variation.
+  </div>
+  <iframe 
+    src="../plots/india_pm25_snapshot_map.html"
+    width="100%"
+    height="600"
+    style="border:none;"
+    loading="lazy">
+  </iframe>
+</div>
+
 <div class="pull-quote">
 “Air pollution is not just about how much is produced — it is about how much is allowed to remain.”
 </div>
@@ -444,30 +459,96 @@ to collapse — and how little additional pressure is required to push it there.
 <h2>When Everything Stopped</h2>
 
 <p>
-The COVID lockdown offered a rare natural experiment. For a brief period, traffic collapsed,
-construction paused, and industrial emissions fell sharply. Air quality improved, but only
-temporarily.
+In March 2020, India entered an unprecedented nationwide lockdown. Roads emptied,
+factories shut down, construction halted, and air traffic nearly disappeared. For air
+quality researchers, this moment created a rare natural experiment — a sudden,
+near-total pause in urban emissions.
 </p>
 
 <p>
-Monthly data from 2020 shows clear declines during lockdown months, followed by rapid
-deterioration once normal activity resumed. Structural forces quickly reasserted themselves.
+To understand how deeply everyday human activity shapes air quality, we compare
+average AQI levels across Indian cities before COVID (2015–2019 baseline) with conditions
+during the strict lockdown period (March–May 2020). City-level data from 23 monitoring
+locations shows Delhi’s pre-lockdown average AQI of about 267 fell to roughly 133 during
+the lockdown — a drop of over 130 points — while cities like Patna, Gurugram, and Lucknow
+saw similar sharp improvements.
 </p>
 
 <div class="plot-block">
   <div class="plot-context">
-    Monthly AQI during the COVID lockdown demonstrates short-term gains that vanish
-    once systemic conditions return.
+    Average city-level AQI across India before COVID (2015–2019 baseline).
+    Pollution patterns closely follow geography and urban structure.
   </div>
-  <div class="plot-placeholder">
-    [ Plot 4: COVID AQI analysis ]
+  <!-- PLOT C1 -->
+    <div class="plot-placeholder">
+     <iframe
+    src="../plots/india_pre_covid_map.html"
+    width="100%"
+    height="550"
+    style="border:none;"
+    loading="lazy">
+  </iframe>
   </div>
 </div>
 
 <p>
-The lesson is not that lockdowns are desirable, but that lasting solutions must address
-how pollution accumulates, not just how it is produced.
+Before the lockdown, air pollution followed a familiar pattern. Inland and landlocked
+cities — particularly across northern India — recorded persistently high AQI levels,
+while coastal cities benefited from stronger dispersion.
 </p>
+
+<div class="plot-block">
+  <div class="plot-context">
+    AQI levels during the COVID lockdown (March–May 2020).
+    Emissions fell sharply across nearly all cities.
+  </div>
+  <!-- PLOT C2 -->
+   <div class="plot-placeholder">
+     <iframe
+    src="../plots/india_covid_map.html"
+    width="100%"
+    height="550"
+    style="border:none;"
+    loading="lazy">
+  </iframe>
+  </div>
+</div>
+
+<p>
+The improvement was immediate and widespread. Cities that routinely experienced
+hazardous air quality saw dramatic declines within weeks. For a brief moment,
+Delhi’s air resembled that of cities with far lower baseline pollution.
+</p>
+
+<div class="plot-block">
+  <div class="plot-context">
+    Change in AQI during the COVID lockdown (negative values indicate improvement).
+    The largest gains occur in cities that are usually the most polluted.
+  </div>
+  <!-- PLOT C3 -->
+   <div class="plot-placeholder">
+     <iframe
+    src="../plots/india_covid_change_map.html"
+    width="100%"
+    height="550"
+    style="border:none;"
+    loading="lazy">
+  </iframe>
+  </div>
+</div>
+
+<p>
+The lockdown did not permanently solve India’s air pollution problem. But it revealed
+something critical: urban air quality is highly responsive to human activity. The same
+cities that suffer the most in normal times benefit the most when emissions are removed.
+</p>
+
+<p>
+When restrictions eased, pollution returned — underscoring that lasting solutions
+must address how pollution accumulates, not just how briefly it can be suppressed.
+</p>
+
+
 
 <h2>Conclusion: Pollution Is a System</h2>
 
@@ -485,9 +566,39 @@ disperse more easily. In Delhi, they do not.
 Some cities breathe worse air not because they emit more — but because their air has nowhere to go.
 </div>
 
+<h2>Data &amp; methods</h2>
+
+<p>
+This analysis draws on three main datasets, all processed from CPCB-backed and OpenAQ
+sources and publicly available AQI records.
+</p>
+
+<ul style="margin-bottom: 26px;">
+  <li><strong>Delhi NCR AQI (2020–2024):</strong> Hourly readings from multiple monitoring
+  stations across Delhi and the National Capital Region. Includes PM2.5, PM10, NO₂, SO₂,
+  CO, O₃, and derived AQI and category. Used for seasonal patterns, Diwali comparisons,
+  and yearly trends.</li>
+  <li><strong>City-level COVID AQI change (2015–2020):</strong> Pre-COVID baseline
+  (2015–2019 average) and lockdown-period (March–May 2020) average AQI for 23 Indian
+  cities. Used for the pre-COVID, lockdown, and change maps.</li>
+  <li><strong>India PM2.5 snapshot:</strong> Station-level PM2.5 measurements across
+  Indian monitoring locations (state, city, station, coordinates). Used for the
+  state coverage map and the PM2.5 snapshot map.</li>
+</ul>
+
+<p>
+Visualisations include: all-India and state-level PM2.5 maps; major-city AQI comparison;
+Delhi seasonal and winter AQI; Diwali-period trends (year-wise, before/after, and period
+map); and COVID pre-, during-, and change maps. Where applicable, iframes embed
+interactive Plotly charts; the live OpenAQ map link reflects current reporting availability.
+</p>
+
 <footer>
   <p>
     Data sources: CPCB-backed datasets, OpenAQ, publicly available AQI records.
+    Processed files: <code>delhi_ncr_aqi_2020_2024_clean.csv</code>,
+    <code>covid_city_aqi_change_2015_2020.csv</code>,
+    <code>india_pm25_snapshot_clean.csv</code>.
     This project was conducted as an exploratory data science analysis.
   </p>
 </footer>
