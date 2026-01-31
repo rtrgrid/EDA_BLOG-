@@ -4,38 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Some Indian Cities Breathe Worse Air Than Others</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 
  <style>
   body {
-    font-family: "Georgia", "Times New Roman", serif;
-    background: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-    line-height: 1.9;
-  }
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #f7f8fb;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.75;
+}
+
 
   .container {
-    max-width: 880px;
-    margin: auto;
-    padding: 80px 28px;
-  }
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 70px 60px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
 
-  h1 {
-    font-size: 3.2rem;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    border-bottom: 3px solid #000;
-    padding-bottom: 20px;
-  }
 
-  h2 {
-    font-size: 2rem;
-    margin-top: 90px;
-    margin-bottom: 22px;
-    padding-top: 30px;
-    border-top: 2px solid #000;
-  }
+ h1 {
+  font-size: 3.4rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-top: 100px;
+  margin-bottom: 18px;
+  padding-top: 0;
+  border-top: none;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e63946;
+  margin-top: 14px;
+  border-radius: 3px;
+}
+
 
   p {
     font-size: 1.1rem;
@@ -47,31 +66,60 @@
     margin-bottom: 50px;
   }
 
-  .pull-quote {
-    font-size: 1.4rem;
-    font-style: italic;
-    border-left: 4px solid #000;
-    padding-left: 24px;
-    margin: 60px 0;
-  }
+.pull-quote {
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-left: none;
+  padding: 30px 36px;
+  margin: 70px 0;
+  background: linear-gradient(90deg, #fff5f5, #ffffff);
+  border-radius: 12px;
+  color: #b00020;
+}
+p {
+  font-size: 1.08rem;
+  margin-bottom: 22px;
+  color: #222;
+}
+
 
   .plot-block {
-    border: 2px solid #000;
-    padding: 26px;
-    margin: 70px 0;
-  }
+  background: #fafafa;
+  border: none;
+  padding: 28px;
+  margin: 70px 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.plot-block:hover {
+  transform: translateY(-3px);
+}
+
 
   .plot-context {
-    font-size: 1rem;
-    border-bottom: 1px solid #000;
-    padding-bottom: 14px;
-    margin-bottom: 18px;
-  }
+  font-size: 0.95rem;
+  color: #444;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+
 
   iframe {
-    width: 100%;
-    border: 1px solid #000;
-  }
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
 
   footer {
     margin-top: 140px;
@@ -241,6 +289,15 @@ the data, visualisations, and evidence that lead to the conclusion.
 “Air pollution is not just about how much is produced — it is about how much is allowed to remain.”
 </div>
 
+<p>
+At this point, a natural question emerges: why focus so much attention on Delhi?
+The answer is not political, symbolic, or anecdotal — it is statistical.
+Across nearly every comparison in the data, Delhi consistently appears at the
+upper extreme of pollution exposure, making it a revealing case for understanding
+how urban air quality systems fail.
+</p>
+
+
 <h2>Not All Cities Pollute the Same Way</h2>
 
 <p>
@@ -267,6 +324,12 @@ While several cities face elevated pollution, one stands consistently apart.
     loading="lazy">
   </iframe>
 </div>
+<p>
+Even when compared with cities of similar population size and economic growth,
+Delhi’s average AQI remains markedly higher — not just during peak events, but
+across entire years.
+</p>
+
 
 
 <h2>Growth Creates Pressure, Not Destiny</h2>
@@ -538,12 +601,80 @@ Delhi’s air resembled that of cities with far lower baseline pollution.
 </div>
 
 <p>
+The magnitude of improvement during the lockdown is not merely a curiosity.
+It demonstrates that Delhi’s air quality problem is not irreversible.
+When emissions fall, air quality responds rapidly — confirming that the crisis
+is driven by human activity interacting with poor dispersion conditions,
+not by immutable natural factors alone.
+</p>
+
+
+<p>
 The lockdown did not permanently solve India’s air pollution problem. But it revealed
 something critical: urban air quality is highly responsive to human activity. The same
 cities that suffer the most in normal times benefit the most when emissions are removed.
 When restrictions eased, pollution returned — underscoring that lasting solutions
 must address how pollution accumulates, not just how briefly it can be suppressed.
 </p>
+
+<p>
+For residents, these patterns translate into lived consequences.
+Repeated exposure to severe winter pollution means months of breathing air
+that exceeds safe limits many times over. Children, the elderly, and those
+with respiratory conditions bear a disproportionate burden — turning what
+appears in charts as seasonal variation into a public health emergency.
+</p>
+
+<h2>Recovery Was Not Equal Across Cities</h2>
+
+<p>
+The COVID lockdown created a rare natural experiment across Indian cities. For a short period,
+traffic dropped, construction paused, and industrial output slowed. Air quality improved almost
+everywhere. But what happened after restrictions were lifted reveals something more important
+than the temporary improvement itself.
+</p>
+
+<p>
+To compare recovery fairly, air quality is measured here relative to each city’s own pre-COVID
+baseline. A value of 1.0 represents that city’s normal pollution level before the pandemic.
+Values below 1.0 indicate cleaner-than-normal air, while values above 1.0 indicate pollution
+levels exceeding the historical baseline.
+</p>
+
+<div class="plot-block">
+  <div class="plot-context">
+    Post-COVID AQI recovery relative to each city’s baseline. The shaded band marks the lockdown
+    period. Values above 1.0 indicate pollution exceeding each city’s normal pre-COVID level.
+  </div>
+
+  <iframe
+    src="../plots/recovery_covid.html"
+    width="100%"
+    height="560"
+    style="border:none;"
+    loading="lazy">
+  </iframe>
+</div>
+
+<p>
+During the lockdown window, all cities show a visible dip below their baseline levels, confirming
+a broad and immediate air quality improvement. However, the recovery patterns diverge sharply
+afterward. Most cities return gradually toward their historical norms and fluctuate around their
+baseline range.
+</p>
+
+<p>
+Delhi behaves differently. Its air quality rebounds faster and crosses above its baseline more
+frequently than other major cities. The spikes are sharper and more persistent. This pattern
+suggests that once emissions return, pollution accumulates in Delhi more quickly than elsewhere.
+The difference is not only about how much pollution is produced — but how efficiently a city
+can disperse what it produces.
+</p>
+
+<div class="pull-quote">
+Recovery was not equal — Delhi’s pollution returned faster and overshot its own normal levels more often than other major cities.
+</div>
+
 
 <h2>Conclusion: What the Data Show</h2>
 
